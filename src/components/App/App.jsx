@@ -1,11 +1,10 @@
-import { PageHeader } from 'components/PageHeader/PageHeader';
 import { Profile } from 'components/Profile/Profile';
+import { Container } from './App.styled.js'
 import user from 'user.json';
 
 export const App = () => {
   return (
-    <div>
-      <PageHeader text="goit-react-hw-01-components" />
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -15,6 +14,6 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-    </div>
+    </Container>
   );
 };

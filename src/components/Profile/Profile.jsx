@@ -1,18 +1,20 @@
 import PropTypes from "prop-types";
+import { ProfileWrapper, DescriptionWrapper, UserName } from "./Profile.styled.js"
 
 export const Profile = ({ username, tag, location, avatar, followers, views, likes }) => {
     return (
-        <div class="profile">
-            <div class="description">
+        <ProfileWrapper>
+            <DescriptionWrapper>
                 <img
                 src={avatar}
                 alt={username}
-                class="avatar"
+                width="300px"
+                class="Avatar"
                 />
-                <p class="name">{username}</p>
-                <p class={tag}>@pmarica</p>
+                <UserName>{username}</UserName>
+                <p class="tag">@{tag}</p>
                 <p class="location">{location}</p>
-            </div>
+            </DescriptionWrapper>
 
             <ul class="stats">
                 <li>
@@ -28,7 +30,7 @@ export const Profile = ({ username, tag, location, avatar, followers, views, lik
                     <span class="quantity">{likes}</span>
                 </li>
             </ul>
-        </div>
+        </ProfileWrapper>
     );
 };
 
