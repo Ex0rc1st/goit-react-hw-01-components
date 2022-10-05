@@ -6,8 +6,7 @@ export const ProfileWrapper = styled.div`
   margin-right: auto;
   max-width: 300px;
   text-align: center;
-  border: 1px solid grey;
-  border-radius: 8px;
+  border-radius: 8px 8px 0px 0px;
   background-color: #fffaf0;
 `;
 
@@ -25,6 +24,8 @@ export const UserInfo = styled.p`
 export const DescriptionWrapper = styled.div`
   padding-top: 24px;
   padding-bottom: 10px;
+  border: 1px solid grey;
+  border-radius: 8px 8px 0px 0px;
 `;
 
 export const StatsWrapper = styled.ul`
@@ -33,14 +34,20 @@ export const StatsWrapper = styled.ul`
   padding-left: 0;
   margin: 0;
   background-color: lightgray;
+  border: 1px solid grey;
+  border-top-style: none;
+  border-radius: 0px 0px 8px 8px;
 `;
 
 export const StatsItem = styled.li`
   list-style: none;
-  /* border-style: inset;
-  border-color: grey; */
+  border-left: 1px solid grey;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  :first-child {
+    border-left: none;
+  }
 `;
 
 export const StatName = styled.span`
