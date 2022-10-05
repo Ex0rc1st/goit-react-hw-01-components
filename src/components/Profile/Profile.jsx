@@ -3,6 +3,11 @@ import {
   ProfileWrapper,
   DescriptionWrapper,
   UserName,
+  UserInfo,
+  StatsWrapper,
+  StatsItem,
+  StatName,
+  Quantity,
 } from './Profile.styled.js';
 
 export const Profile = ({
@@ -17,26 +22,26 @@ export const Profile = ({
   return (
     <ProfileWrapper>
       <DescriptionWrapper>
-        <img src={avatar} alt={username} width="300px" class="Avatar" />
+        <img src={avatar} alt={username} width="150px" class="Avatar" />
         <UserName>{username}</UserName>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
+        <UserInfo>@{tag}</UserInfo>
+        <UserInfo>{location}</UserInfo>
       </DescriptionWrapper>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
-        </li>
-      </ul>
+      <StatsWrapper>
+        <StatsItem>
+          <StatName>Followers</StatName>
+          <Quantity>{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <StatName>Views</StatName>
+          <Quantity>{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <StatName>Likes</StatName>
+          <Quantity>{likes}</Quantity>
+        </StatsItem>
+      </StatsWrapper>
     </ProfileWrapper>
   );
 };
