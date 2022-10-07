@@ -22,7 +22,7 @@ export const Profile = ({
   return (
     <ProfileWrapper>
       <DescriptionWrapper>
-        <img src={avatar} alt={username} width="150px" class="Avatar" />
+        <img src={avatar} alt={username} width="150px" />
         <UserName>{username}</UserName>
         <UserInfo>@{tag}</UserInfo>
         <UserInfo>{location}</UserInfo>

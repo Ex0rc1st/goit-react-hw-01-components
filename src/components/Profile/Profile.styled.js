@@ -6,7 +6,7 @@ export const ProfileWrapper = styled.div`
   margin-right: auto;
   max-width: 300px;
   text-align: center;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 8px 8px 8px;
   background-color: #fffaf0;
 `;
 
@@ -46,7 +46,7 @@ export const StatsItem = styled.li`
   padding-top: 16px;
   padding-bottom: 16px;
 
-  :first-child {
+  :first-of-type {
     border-left: none;
   }
 `;
