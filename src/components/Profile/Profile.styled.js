@@ -31,6 +31,7 @@ export const DescriptionWrapper = styled.div`
 export const StatsWrapper = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
   padding-left: 0;
   margin: 0;
   background-color: lightgray;
